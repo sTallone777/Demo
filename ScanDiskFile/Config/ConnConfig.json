@@ -1,0 +1,10 @@
+{
+  "ConnectionProperties": {
+    "Server": "192.168.10.100",
+    "Port": "3306",
+    "Uid": "xxxx",
+    "Pwd": "xxxx",
+    "Database": "xxxx",
+    "Charset": "utf8"
+  }
+}

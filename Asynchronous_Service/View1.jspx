@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:resource type="javascript" source="/js/func.js"/>
+      <af:clientListener method="createWsConn" type="load"/>
+      <af:form id="f1">
+        <af:panelGroupLayout id="pgl1" layout="vertical">
+          <af:panelGroupLayout id="pgl3">
+            <af:commandButton text="Execute Rule" id="cb1"
+                              actionListener="#{viewScope.mb1.cb1_click}"
+                              partialSubmit="true"/>
+            <af:commandButton text="commandButton 2" id="cb2" visible="false"
+                              partialSubmit="true"/>
+          </af:panelGroupLayout>
+          <af:spacer width="10" height="10" id="s1"/>
+          <af:inputText label="#{null}" id="it1"
+                        value="#{viewScope.mb1.sessionId}" visible="false"/>
+          <af:panelGroupLayout id="pgl2">
+            <af:outputLabel value="Status: " id="ol1"/>
+            <af:outputText value="#{viewScope.mb1.ruleResult}" id="ot1"
+                           partialTriggers="cb1 cb2"/>
+          </af:panelGroupLayout>
+          <af:spacer width="10" height="10" id="s2"/>
+          <af:selectOneChoice label="list:" id="soc1">
+            <af:selectItem label="1111" value="1" id="si3"/>
+            <af:selectItem label="2222" value="2" id="si2"/>
+            <af:selectItem label="3333" value="3" id="si1"/>
+          </af:selectOneChoice>
+        </af:panelGroupLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

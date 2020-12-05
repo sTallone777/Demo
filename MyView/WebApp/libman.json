@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.4.0",
+      "destination": "wwwroot/twitter-bootstrap/"
+    },
+    {
+      "library": "Chart.js@2.9.3",
+      "destination": "wwwroot/Chart.js/"
+    },
+    {
+      "library": "jquery@3.5.0",
+      "destination": "wwwroot/jquery/"
+    }
+  ]
+}
