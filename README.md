@@ -8,7 +8,7 @@ This repo is a collection of demos.
     
   + *MyView* 
   
-    A .net core mvc demo which used entity framework.
+    A `.net core` MVC demo which used entity framework.
     
   + *ScanDiskFile*   
   
