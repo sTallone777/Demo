@@ -18,6 +18,10 @@ This repo is a collection of demos.
   
     A Calculator which created with `React` and `Go`.
     
+  + *aoplog*
+  
+    An Aspect Oriented Programming demo of logging.
+    
   
    
   
