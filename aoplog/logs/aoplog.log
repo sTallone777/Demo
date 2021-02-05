@@ -15,3 +15,276 @@
 2021-02-05 14:23:06,963 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
 2021-02-05 14:23:06,995 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 8ms
 2021-02-05 14:23:06,996 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 15:12:25,427 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 1684 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:12:25,427 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:12:26,384 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:12:26,384 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:12:26,384 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:12:26,384 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:12:26,462 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:12:26,462 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 986 ms
+2021-02-05 15:12:26,634 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:12:26,775 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:12:26,790 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:12:26,806 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.713 seconds (JVM running for 2.115)
+2021-02-05 15:12:47,213 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 15:12:47,214 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 15:12:47,214 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 0 ms
+2021-02-05 15:12:47,248 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 9ms
+2021-02-05 15:12:47,249 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 15:15:03,063 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 18440 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:15:03,066 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:15:03,622 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+2021-02-05 15:15:03,629 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-05 15:15:03,652 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.ranbo.aoplog.AoplogApplication.main(AoplogApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:216)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:405)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:379)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvice(ReflectiveAspectJAdvisorFactory.java:309)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.instantiateAdvice(InstantiationModelAwarePointcutAdvisorImpl.java:149)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.<init>(InstantiationModelAwarePointcutAdvisorImpl.java:113)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:213)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:144)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	... 16 common frames omitted
+2021-02-05 15:16:38,159 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 13224 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:16:38,162 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:16:39,080 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:16:39,089 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:16:39,090 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:16:39,090 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:16:39,157 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:16:39,157 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 956 ms
+2021-02-05 15:16:39,323 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:16:39,453 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:16:39,473 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:16:39,481 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.654 seconds (JVM running for 2.037)
+2021-02-05 15:16:48,083 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 15:16:48,084 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 15:16:48,084 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 0 ms
+2021-02-05 15:16:48,117 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 9ms
+2021-02-05 15:16:48,118 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 15:17:08,374 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 11828 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:17:08,374 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:17:08,903 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+2021-02-05 15:17:08,918 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-05 15:17:08,934 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.ranbo.aoplog.AoplogApplication.main(AoplogApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:216)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:405)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:379)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvice(ReflectiveAspectJAdvisorFactory.java:309)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.instantiateAdvice(InstantiationModelAwarePointcutAdvisorImpl.java:149)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.<init>(InstantiationModelAwarePointcutAdvisorImpl.java:113)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:213)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:144)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	... 16 common frames omitted
+2021-02-05 15:29:56,449 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 11516 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:29:56,449 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:29:57,360 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:29:57,376 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:29:57,376 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:29:57,376 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:29:57,440 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:29:57,440 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 957 ms
+2021-02-05 15:29:57,627 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:29:57,760 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:29:57,775 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:29:57,791 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.67 seconds (JVM running for 2.051)
+2021-02-05 15:30:05,206 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 15:30:05,207 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 15:30:05,207 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 0 ms
+2021-02-05 15:30:05,230 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed before 1ms
+2021-02-05 15:30:05,240 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 12ms
+2021-02-05 15:30:05,240 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 15:30:40,714 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 10612 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:30:40,714 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:30:41,672 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:30:41,672 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:30:41,687 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:30:41,687 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:30:41,750 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:30:41,750 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 985 ms
+2021-02-05 15:30:41,932 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:30:42,073 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:30:42,088 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:30:42,104 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.721 seconds (JVM running for 2.101)
+2021-02-05 15:30:48,418 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 17908 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:30:48,418 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:30:49,370 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:30:49,386 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:30:49,386 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:30:49,386 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:30:49,448 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:30:49,448 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 980 ms
+2021-02-05 15:30:49,632 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:30:49,789 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:30:49,821 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:30:49,821 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.737 seconds (JVM running for 2.117)
+2021-02-05 15:30:52,005 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 15:30:52,005 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 15:30:52,006 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2021-02-05 15:30:52,029 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed before 1ms
+2021-02-05 15:30:52,039 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed After 0ms
+2021-02-05 15:30:52,039 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 13ms
+2021-02-05 15:30:52,039 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 15:31:08,179 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-2] String com.ranbo.aoplog.controller.testController.getData() executed before 0ms
+2021-02-05 15:31:08,179 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-2] String com.ranbo.aoplog.controller.testController.getData() executed After 0ms
+2021-02-05 15:31:08,179 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-2] String com.ranbo.aoplog.controller.testController.getData() executed in 0ms
+2021-02-05 15:31:08,180 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-2] proceed: Hello Aop.
+2021-02-05 15:32:17,003 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 4016 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:32:17,003 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:32:17,962 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:32:17,978 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:32:17,978 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:32:17,978 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:32:18,041 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:32:18,041 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 996 ms
+2021-02-05 15:32:18,236 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:32:18,394 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:32:18,409 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:32:18,425 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.761 seconds (JVM running for 2.152)
+2021-02-05 15:32:23,118 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 15:32:23,118 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 15:32:23,119 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2021-02-05 15:32:23,143 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed before 1ms
+2021-02-05 15:32:23,152 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed afterReturn 0ms
+2021-02-05 15:32:23,153 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed After 0ms
+2021-02-05 15:32:23,153 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 14ms
+2021-02-05 15:32:23,153 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 15:36:47,543 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 18376 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 15:36:47,543 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 15:36:48,498 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 15:36:48,514 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:36:48,514 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 15:36:48,514 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 15:36:48,576 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 15:36:48,576 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 979 ms
+2021-02-05 15:36:48,787 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 15:36:48,959 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 15:36:48,974 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 15:36:48,990 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.769 seconds (JVM running for 2.146)
+2021-02-05 15:36:52,263 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 15:36:52,263 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 15:36:52,264 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2021-02-05 15:36:52,288 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed before 1ms
+2021-02-05 15:36:52,298 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed afterReturn 0ms
+2021-02-05 15:36:52,299 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed After 0ms
+2021-02-05 15:36:52,299 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 14ms
+2021-02-05 15:36:52,299 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 16:01:25,692 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 15004 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 16:01:25,692 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 16:01:26,630 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 16:01:26,645 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 16:01:26,645 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 16:01:26,645 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 16:01:26,708 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 16:01:26,708 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 960 ms
+2021-02-05 16:01:26,933 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 16:01:27,089 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 16:01:27,105 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 16:01:27,120 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.744 seconds (JVM running for 2.123)
+2021-02-05 16:01:32,942 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 16:01:32,942 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 16:01:32,943 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2021-02-05 16:01:32,964 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start around
+2021-02-05 16:01:32,965 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start before
+2021-02-05 16:01:32,968 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed before 1ms
+2021-02-05 16:01:32,968 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end before
+2021-02-05 16:01:32,977 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start afterreturn
+2021-02-05 16:01:32,978 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed afterReturn 0ms
+2021-02-05 16:01:32,978 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end afterreturn
+2021-02-05 16:01:32,978 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start after
+2021-02-05 16:01:32,978 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed After 0ms
+2021-02-05 16:01:32,979 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end after
+2021-02-05 16:01:32,979 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 14ms
+2021-02-05 16:01:32,979 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 16:01:32,979 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end around
+2021-02-05 16:03:19,264 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 16956 (C:\work\Git\Demo\aoplog\target\classes started by Ranbo001 in C:\work\Git\Demo\aoplog)
+2021-02-05 16:03:19,264 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 16:03:20,253 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 16:03:20,263 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 16:03:20,263 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 16:03:20,263 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 16:03:20,333 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 16:03:20,333 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1020 ms
+2021-02-05 16:03:20,528 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 16:03:20,669 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 16:03:20,685 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 16:03:20,700 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.774 seconds (JVM running for 2.15)
+2021-02-05 16:03:23,376 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 16:03:23,376 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 16:03:23,377 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2021-02-05 16:03:23,398 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start around
+2021-02-05 16:03:23,398 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] before procced
+2021-02-05 16:03:23,398 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start before
+2021-02-05 16:03:23,402 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed before 1ms
+2021-02-05 16:03:23,402 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end before
+2021-02-05 16:03:23,410 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start afterreturn
+2021-02-05 16:03:23,411 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed afterReturn 0ms
+2021-02-05 16:03:23,411 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end afterreturn
+2021-02-05 16:03:23,412 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] start after
+2021-02-05 16:03:23,412 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed After 0ms
+2021-02-05 16:03:23,412 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end after
+2021-02-05 16:03:23,412 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] after procced
+2021-02-05 16:03:23,413 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 14ms
+2021-02-05 16:03:23,413 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
+2021-02-05 16:03:23,413 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] end around

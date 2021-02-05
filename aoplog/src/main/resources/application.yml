@@ -1,2 +1,6 @@
 server:
   port: 8100
+
+logging:
+  level:
+    org.springframework.boot.autoconfigure: error

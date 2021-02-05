@@ -11,6 +11,7 @@ public class testController {
     @GetMapping("/getData")
     @Log
     public String getData() {
+        System.out.println("run method");
         return "Hello Aop.";
     }
 }
