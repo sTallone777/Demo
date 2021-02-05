@@ -1,0 +1,17 @@
+2021-02-05 14:22:38,130 INFO org.springframework.boot.StartupInfoLogger [main] Starting AoplogApplication using Java 15.0.1 on DESKTOP-7QMJD52 with PID 13452 (C:\work\Git\Practise\aoplog\target\classes started by Ranbo001 in C:\work\Git\Practise\aoplog)
+2021-02-05 14:22:38,130 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-05 14:22:39,043 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8100 (http)
+2021-02-05 14:22:39,058 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8100"]
+2021-02-05 14:22:39,058 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-05 14:22:39,058 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-05 14:22:39,121 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-05 14:22:39,121 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 952 ms
+2021-02-05 14:22:39,301 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-05 14:22:39,418 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8100"]
+2021-02-05 14:22:39,433 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8100 (http) with context path ''
+2021-02-05 14:22:39,449 INFO org.springframework.boot.StartupInfoLogger [main] Started AoplogApplication in 1.67 seconds (JVM running for 2.058)
+2021-02-05 14:23:06,962 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-05 14:23:06,962 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-05 14:23:06,963 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2021-02-05 14:23:06,995 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] String com.ranbo.aoplog.controller.testController.getData() executed in 8ms
+2021-02-05 14:23:06,996 INFO com.ranbo.aoplog.aop.LogAspect [http-nio-8100-exec-1] proceed: Hello Aop.
